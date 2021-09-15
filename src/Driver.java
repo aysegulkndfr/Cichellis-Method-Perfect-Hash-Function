@@ -8,6 +8,8 @@ import java.util.Stack;
 public class Driver {
 
 	public static void main(String[] args) {
+		//start timer
+		long startTime = System.currentTimeMillis();
 		
 		//list used to hold key words.
 		ArrayList<Key> listOfKeys = new ArrayList<Key>();
@@ -75,6 +77,12 @@ public class Driver {
 		results are accurate thus proving this implementation of Cichelli's algorithm is effective.
 		*/
 		readOtherFile(textFile, g, hashTable, keyWordCounter, modValue);
+
+		//end timer
+		long endTime = System.currentTimeMillis();
+		//calculate the time it took to run the program.
+		long timeTaken = endTime - startTime;
+		System.out.println("Execution time: " + timeTaken + " milliseconds");
 		
 	}//end of main
 	
